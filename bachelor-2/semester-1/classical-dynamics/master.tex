@@ -1,0 +1,35 @@
+\documentclass[a4paper, twoside=true, 12pt]{extreport}
+\input{../preamble.tex}
+
+\DeclareMathOperator{\length}{length}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator*{\res}{res}
+
+\usepackage{faktor}
+
+\makeatletter
+\DeclareRobustCommand*{\mfaktor}[3][]
+{
+   { \mathpalette{\mfaktor@impl@}{{#1}{#2}{#3}} }
+}
+\newcommand*{\mfaktor@impl@}[2]{\mfaktor@impl#1#2}
+\newcommand*{\mfaktor@impl}[4]{
+   \settoheight{\faktor@zaehlerhoehe}{\ensuremath{#1#2{#3}}}%
+   \settoheight{\faktor@nennerhoehe}{\ensuremath{#1#2{#4}}}%
+      \raisebox{-0.5\faktor@zaehlerhoehe}{\ensuremath{#1#2{#3}}}%
+      \mkern-4mu\diagdown\mkern-5mu%
+      \raisebox{0.5\faktor@nennerhoehe}{\ensuremath{#1#2{#4}}}%
+}
+\makeatother
+
+\title{Vector and Complex Calculus}
+
+\begin{document}
+    \maketitle
+    \tableofcontents
+    \clearpage
+     % start lectures
+     \input{vectors.tex}
+    % end lectures
+\end{document}

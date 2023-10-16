@@ -1,0 +1,58 @@
+\lesson{1}{2023-10-16 20:17}{Introduction}
+\chapter{Vectors}
+
+\section{Introduction}
+
+\begin{definition}[Vectors]
+  Vectors are mathematical objects with both {\bf magnitude} and {\bf direction}.
+\end{definition}
+
+\begin{eg}[Examples of vectors]
+  Here are some important examples of vectors\\
+  \vspace{-10px}
+  \begin{itemize}
+    \item The displacement of a particle is a vector.
+    \item The velocity of a particle is a vector.
+    \item The force acting on a particle is a vector.
+  \end{itemize}
+
+\end{eg}
+
+\section{Euclidean Three Space $\mathbb{E}^3$}
+
+\begin{definition}[Euclidian Three Space]
+ 
+  Euclidean Three Space is the set of all ordered triples of real numbers.\\
+  \vspace{-10px}
+  \begin{equation}
+    \mathbb{E}^3 = \{(x,y,z) | x,y,z \in \mathbb{R}\}
+  \end{equation}
+
+\end{definition}
+
+The \textbf{axes} of $\mathbb{E}^{3}$ are the $x$, $y$ and $z$, i.e.
+\vspace{-10px}
+\begin{equation}
+  x = (x,0,0), y = (0,y,0), z = (0,0,z)
+\end{equation}
+
+We orient the axis according to the \textbf{right hand rule}. This is shown in the following diagram:
+
+%generate tikz code for axes in 3d space
+
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \draw[->] (0,0,0) -- (3,0,0) node[anchor=north east]{$y$};
+    \draw[->] (0,0,0) -- (0,3,0) node[anchor=north west]{$z$};
+    \draw[->] (0,0,0) -- (0,0,3) node[anchor=south]{$x$};
+  \end{tikzpicture}
+  \caption{Axes in $\mathbb{E}^3$}
+\end{figure}
+
+\begin{note}
+  We need to pick an \textbf{origin} and stay with it. We will use the origin $(0,0,0)$.
+\end{note} 
+
+\clearpage
+\section{Vectors in $\mathbb{E}^3$}
