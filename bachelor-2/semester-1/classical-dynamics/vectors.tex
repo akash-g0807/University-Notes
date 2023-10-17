@@ -1,4 +1,4 @@
-\lesson{1}{2023-10-16 20:17}{Introduction}
+\lesson{1}{2023-10-16 20:17}{Vectors}
 \chapter{Vectors}
 
 \section{Introduction}
@@ -6,6 +6,14 @@
 \begin{definition}[Vectors]
   Vectors are mathematical objects with both {\bf magnitude} and {\bf direction}.
 \end{definition}
+Geometrially, vectors can be thought of as arrows/direced line segments in space in space.
+\begin{figure}[H]
+\centering
+   \includegraphics[scale=3.0]{vector.pdf}
+   \caption{A Vector}
+   \label{fig:figure-1-vector}
+\end{figure}
+
 
 \begin{eg}[Examples of vectors]
   Here are some important examples of vectors\\
@@ -17,6 +25,18 @@
   \end{itemize}
 
 \end{eg}
+
+\begin{notation}
+  Vectors can be denoted in 3 ways,
+  \begin{itemize}
+    \item Using {\bf boldface notation}: $\boldsymbol{V}$
+    \item Underlining:  $\underline{V}$ 
+    \item An arrow over the symbol: $\vec{V}$
+
+  \end{itemize}
+
+
+\end{notation}
 
 \section{Euclidean Three Space $\mathbb{E}^3$}
 
@@ -54,5 +74,35 @@ We orient the axis according to the \textbf{right hand rule}. This is shown in t
   We need to pick an \textbf{origin} and stay with it. We will use the origin $(0,0,0)$.
 \end{note} 
 
-\clearpage
 \section{Vectors in $\mathbb{E}^3$}
+\subsection{Distance in $\mathbb{E}^3$}
+Let $P$ and $P^{'}$ be points in $\mathbb{E}^3$. And let $P = (x,y,z)$ and $P^{'} = (x^{'},y^{'},z^{'})$.
+\begin{definition}[Distance in $\mathbb{E}^3$]
+  The \textbf{distance} between $P$ and $P^{'}$ is defined as:
+  \begin{equation}
+    d(P,P^{'}) = \sqrt{(x-x^{'})^2 + (y-y^{'})^2 + (z-z^{'})^2}
+  \end{equation}
+\end{definition}
+This is illustrated in the following diagram
+\begin{figure}[H]
+\centering
+   \includegraphics[scale=1.75]{distance.pdf}
+   \caption{Distance in $\mathbb{E}^3$}
+   \label{fig:figure-8-space}
+\end{figure}
+\clearpage
+\subsection{Vectors in $\mathbb{E}^3$}
+\begin{definition}[Vectors in $\mathbb{E}^3$]
+  A \textbf{vector} in $\mathbb{E}^3$ is an ordered triple of real numbers.\\
+  \vspace{-10px}
+  \begin{equation}
+    \vec{v} = (v_1,v_2,v_3)
+  \end{equation}
+\end{definition}
+
+\begin{Notation}
+  We can also represent vectors using {\bf column notation}
+  $$\underline{v} = \begin{bmatrix} v_1 \\ v_2 \\ v_3\end{bmatrix} $$
+  
+\end{Notation}
+

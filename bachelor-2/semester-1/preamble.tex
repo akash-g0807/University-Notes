@@ -22,7 +22,7 @@ citecolor=black, plainpages=false, urlcolor=black}
 \usepackage{xparse}
 \usepackage{multirow}
 \usepackage[usenames,dvipsnames]{xcolor}
-
+\graphicspath{{./figures/}}
 % \usepackage{cmbright}
 \usepackage{geometry}
 \geometry{a4paper, twoside=true}
@@ -34,6 +34,11 @@ citecolor=black, plainpages=false, urlcolor=black}
  right = 25mm
  }
 
+ \usepackage{bookmark}
+
+\makeatletter
+\pdfstringdefDisableCommands{\let\HyPsd@CatcodeWarning\@gobble}
+\makeatother
 
 \usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb}
 \usepackage{mathrsfs}
@@ -65,6 +70,10 @@ citecolor=black, plainpages=false, urlcolor=black}
 \titleformat{\section}[hang]
 {\normalfont \fontsize{18px}{18px}\bfseries}{\thesection}{1em}{}
 \titlespacing{\section}{0px}{20px}{15px}
+
+\titleformat{\subsection}[hang]
+{\normalfont \fontsize{14px}{14px}\bfseries}{\thesubsection}{1em}{}
+\titlespacing{\subsection}{0px}{20px}{12px}
 
 
 
