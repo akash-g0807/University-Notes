@@ -161,6 +161,22 @@ Therefore,
   \end{flalign*}
 \end{proof}
 
+\subsection{Using Scalar Product to find the length of a vector}
+We can also use scalar product to find the length of a vector.
+\begin{theorem}
+  Let $\vec{v} \in \mathbb{E}^3$. Then,
+  \begin{equation}
+    \mid \vec{v} \mid = \sqrt{\vec{v} \cdot \vec{v}}
+  \end{equation}
+\end{theorem}
+\begin{proof}
+Let $\vec{v} \in \mathbb{E}^3$. Then,
+  \begin{flalign*}
+    \mid \vec{v} \mid &= \sqrt{v_1^{2} + v_2^{2} + v_3^{2}} \\ \\ 
+    &= \sqrt{v_1v_1 + v_2v_2 + v_3v_3}  \\ \\
+    &= \sqrt{\vec{v} \cdot \vec{v}}  
+  \end{flalign*}
+\end{proof}
 
 \subsection{Using Scalar Product to find the angle between two vectors}
 
@@ -180,5 +196,11 @@ Therefore,
   \end{flalign*}
 \end{proof}
 
-
-
+\begin{note}
+  Some basic properties of scalar product:
+  \begin{enumerate}
+    \item If $\vec{v} \cdot \vec{w} = 0$, then $\theta = \frac{\pi}{2}$.
+    \item If $\vec{v} \cdot \vec{w} > 0$, then $\theta \in [0, \frac{\pi}{2})$.
+    \item If $\vec{v} \cdot \vec{w} < 0$, then $\theta \in (\frac{\pi}{2}, \pi]$.
+  \end{enumerate}
+\end{note}
