@@ -1,0 +1,21 @@
+\section{Triple Scalar Product}
+
+\begin{theorem}[Triple Scalar Product]
+	Let $\vec{a}, \vec{b}, \vec{c} \in \mathbb{E}^{3}$. Then
+	\begin{equation}
+		\label{eq: triple-scalar-product}
+		\vec{a} \cdot (\vec{b} \times \vec{c}) = \varepsilon_{abc}a_pb_qc_r
+	\end{equation}
+\end{theorem}
+\begin{note}
+	We have used \textbf{Einstein's Notation} for Scalar and Vector Product as well as Levi-Civita Notation \ref{eq:levi-civita}
+\end{note}
+\begin{proof}
+	\begin{align*} \underline{a} \ \cdot \ (\underline{b} \times \underline{c}) & = a_{p}\ (\underline{b} \times \underline{c})_{p} \\ \\ &= a_{p}\ \epsilon_{pqr}\ b_{q}\ c_{r}\\ \\
+                                                                            & = \epsilon_{pqr}\ a_{p}\ b_{q}\ c_{r}\end{align*}
+\end{proof}
+\begin{note}
+	Although not mathematically valid, we can use the {\bf determinant method}
+	$$\underline{a} \cdot(\underline{b} \times \underline{c}) =
+		\det\begin{pmatrix}a_1 & a_2 & a_3 \\ b_{1} & b_{2} & b_{3} \\ c_{1}  & c_{2} & c_{3}\end{pmatrix}$$
+\end{note}
