@@ -1,0 +1,57 @@
+\section{Vector Equation of Planes}
+\begin{definition}[Vector Equation of Planes]
+	Given a point $P$ with {\bf position vector} $\underline{p}$ and 2 vectors {\bf not} lying on the same line i.e. {\bf not collinear}, then there is a plane that passes
+	through $P$ parallel to both $\underline{u}$ and $\underline{v}$
+
+	The position vector of an {\em arbitrary} point $x$ is
+	\begin{equation}
+		\label{eq: vector-planes}
+		\underline{x} = \underline{p} + s\underline{u} + t \underline{v} \ \ \ \ \text{for } s,t \in \mathbb{R}
+	\end{equation}
+\end{definition}
+This is known as the {\bf plane spanned} by $\underline{u}$ and $\underline{v}$ going through $P$
+
+\subsection{Parametric Equation of a line}
+\begin{definition}
+	\begin{equation}
+		\label{eq: vector-planes-parametric}
+		\begin{cases}
+			x = x_0 + su_1 + tv_1 \\
+			y = y_0 + su_2 + tv_2 \\
+			z = z_0 + su_3 + tv_3
+		\end{cases}
+		\ \ \ \text{for } s,t \in \mathbb{R}
+	\end{equation}
+\end{definition}
+
+\subsection{Vector Equation of Planes using 3 Points}
+\begin{definition}
+	Given 3 non-linear points $P, Q$ and $R$ with {\bf position vectors} $\underline{p}, \underline{q}$ and $\underline{r}$ respectively.
+	Note that the vectors
+	$$(\underline{p} - \underline{r}) \ \ \text{and} \ \  (\underline{q} - \underline{r})$$
+	are two {\bf direction vectors parallel to the plane}. Then taking $r$ as the {\em starting point}, the equation of the plane becomes
+	\begin{equation}
+		\label{eq: vector-planes-3p}
+		\underline{x} = \underline{r} + s(\underline{p} - \underline{r}) + t (\underline{q} - \underline{r}) \ \ \ \ \text{for } s,t \in \mathbb{R}
+	\end{equation}
+\end{definition}
+
+\subsection{Normal Vector to a Plane}
+Another way to define a plane is by noticing that (in 3d) there is exactly one line which is perpendicular to the plane. A vector parallel to this line is called a {\bf normal vector}.
+
+\begin{note}[Unit Normal]
+	If the {\bf normal vector} has unit length, then it called a {\bf \em unit normal} \\
+	Thus if $\hat{n}$ is a unit normal to a plane then there is {\bf exactly one other} unit normal to the plane namely $-\hat{n}$
+\end{note}
+
+\begin{definition}[Equation of Plane using Normal Vector]
+	If $\underline{p}$ is a {\bf position vector} of a {\em known} point in the plane and $\underline{x}$ is any {\bf arbitary point on the plane}, then
+	$$( \underline{x} - \underline{p} ) $$
+	is parallel to the plane and thus {\bf orthogonal} to the normal. Therefore equation of a plane can be given as
+	\begin{equation}
+		\label{eq: normal-vector-plane-eq}
+		(\underline{x} - \underline{p})\cdot\underline{n} = 0 \ \ \ \ \ \ \ \ \ \ \ \ \ \  \text{(scalar product)}
+	\end{equation}
+	or multipying out the {\bf Scalar Product}
+	$$\underline{x} \cdot \underline{n} = \underline{p} \cdot \underline{n}$$
+\end{definition}
