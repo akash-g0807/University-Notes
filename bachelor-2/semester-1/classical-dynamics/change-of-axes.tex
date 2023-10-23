@@ -115,4 +115,68 @@ Here we have 2 vectors
 
 
 \subsection{Shifting and Changing Unit Vectors}
+\begin{mycenter}
+	\tdplotsetmaincoords{70}{110} % Set the viewing angle
 
+	\begin{tikzpicture}[tdplot_main_coords, scale=2]
+		% Standard Unit Vectors
+		\draw[thick,red,->] (0,0,0) -- (1,0,0) node[anchor=north]{$\underline{e_a}$};
+		\draw[thick,blue,->] (0,0,0) -- (0,1,0) node[anchor=east]{$\underline{e_b}$};
+		\draw[thick,green,->] (0,0,0) -- (0,0,1) node[anchor=south]{$\underline{e_c}$};
+
+		% Set 1: Rotated Unit Vectors (example)
+		\tdplotsetrotatedcoords{45}{45}{0} % Set the rotation angles (example)
+		\begin{scope}[tdplot_rotated_coords]
+			\draw[thick,red,->] (0,0,0) -- (1,0,0) node[anchor=north]{$\underline{e_a}^{'}$};
+			\draw[thick,blue,->] (0,0,0) -- (0,1,0) node[anchor=east]{$\underline{e_b}^{'}$};
+			\draw[thick,green,->] (0,0,0) -- (0,0,1) node[anchor=south]{$\underline{e_c}^{'}$};
+		\end{scope}
+
+	\end{tikzpicture}
+\end{mycenter}
+
+Consider 2 sets of orthogonal unit vectors $\underline{e_a}$ and $\underline{e_{a}^{'}}$ where $a \in \{1, 2, 3\}$.
+
+We {\em can say} that each of the $\underline{e_a}^{'}$ is a {\bf linear combination} of each if the $\underline{e_a}$. So we can say that for a {\bf matrix} $R_{ab}$
+\begin{equation}
+	\underline{e_{a}^{'}}= R_{ab} \ \underline{e_{b}}\tag{$*$}\label{eq: lin-comb}
+\end{equation}
+Since the index $b$ is {\bf repeated twice}, we use the {\bf Einstein Convention}. This is equivalent to:
+$$\underline{e_{a}^{'}}= R_{a1}\ \underline{e_{1}} \ +\  R_{a2}\ \underline{e_{2}} \ +\  R_{a3}\ \underline{e_{3}}$$
+We {\bf need to work out} that $R_{ab}$ is.
+
+
+First we {\em require} from the definition of Kronecker Delta \ref{eq:kronecker-delta}:
+$$\begin{aligned}\delta_{ac} & = \underline{e_{a}^{'}} \ \cdot \ \underline{e_{c}^{'}}                                                                               \\ \\
+                           & = R_{ab} \ \underline{e_{b}}\ \cdot \ R_{cd} \ \underline{e_{d}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \text{from equation (\ref{eq: lin-comb})} \\ \\
+                           & = R_{ab}R_{cd}\ \underline{e_{b}}\ \cdot \ \underline{e_{d}}                                                                          \\ \\
+                           & = R_{ab}R_{cd}\  \delta_{bd}
+	\end{aligned}$$
+
+Therefore we get:
+$$\begin{aligned} \delta_{ac} = R_{ab}R_{cd}\ \delta_{bd} \end{aligned}$$
+
+By again using the {\bf Einstein's Notation} the index $b$ and $d$ is {\bf repeated twice}. Now in the RHS , $\delta_{bd}$  is {\bf 1} only when $\boldsymbol{d=b}$. Hence:
+
+$$\begin{aligned}      & \delta_{ac} = R_{ab}R_{cd}\ \delta_{bd} \\ \\ & \Rightarrow
+                    \delta_{ac} = R_{ab}R_{cb}
+	\end{aligned} $$
+In the expression $\delta_{ac} = R_{ab}R_{cb}$ it is {\bf not} quite matrix multiplication since the {\bf columns of the first} $b$ is {\bf not equal} to the {\em row of the second} $c$ . Therefore we {\bf transpose the matrix} and we get the following:
+$$\begin{aligned}     & \delta_{ac} = R_{ab}R_{cb} = R_{ab}(R^{T})_{bc} = (RR^{T})_{ac} \\ \\
+                    & \Rightarrow \delta_{ac} = (RR^T)_{ac}\end{aligned}$$
+Since $\delta_{ac}$ is the Kronecker Delta \ref{eq:kronecker-delta}/identity matrix, we can say that:
+
+$$RR^{T} = \mathbbm{1} = \begin{pmatrix}1 & 0 & 0\\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}$$
+
+and hence $R$ is an {\bf orthogonal} matrix. Also note that
+$$\begin{aligned}\det(\mathbb{1}) = 1 = & \det(RR^{T})                                                                            \\ \\
+               =                      & \det(R)\det(R^{T}) \ \ \ \ \ \ \ \ \ \ \text{property of det function}                  \\ \\
+               =                      & (\det(R))^{2} \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \text{since } \det(R) = \det(R^{T}) \\ \\\end{aligned} $$
+Hence we get the expression:
+$$\begin{aligned}  & 1 = (\det(R))^{2}          \\ \\
+                 & \Rightarrow  \ \det(R) = 1\end{aligned}$$
+
+Because $R$ is {\bf continuously connected} to the identity matrix we chose $\boldsymbol{+1}$.
+Therefore {\bf any matrix} $R$ with the property:
+$$\det(R) = 1$$
+is a valid matrix.
