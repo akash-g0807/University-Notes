@@ -1,0 +1,56 @@
+\subsection{Polar Velocity and Acceleration}
+
+\subsubsection{Velocity}
+Computing {\bf velocity} in {\bf polar co-ordinates}:
+$$\begin{aligned} \dot{\underline{r}} & = \frac{d}{dt}\Big(r \ \underline{e_{r}}\Big)                                                              \\ \\
+                                    & = \dot{r}\ \underline{e_{r}} + r\ \dot{\theta}\ \underline{e_{\theta}} \ \ \ \ \ \ \ \ \text{product rule}\end{aligned}$$
+
+\begin{definition}[Velocity in Polar co-ordinates]
+	\begin{equation}
+		\label{eq: velocity-polar}
+		\underline{\dot{r}} = \dot{r}\ \underline{e_{r}} + r\ \dot{\theta}\ \underline{e_{\theta}}
+	\end{equation}
+\end{definition}
+
+\subsubsection{Acceleration}
+Computing {\bf Acceleration} in {\bf polar co-ordinates}:
+$$\begin{aligned} \underline{\ddot{r}} & = \frac{d}{dt}\Big(\dot{r}(t)\Big)                                                                                                                                                              \\ \\
+                                     & = \frac{d}{dt}\Big(\dot{r}\underline{e_{r}} + r\dot{\theta}\underline{e_{\theta}} \Big)                                                                                                         \\ \\
+                                     & = \ddot{r}\underline{e_{r}}+ \dot{r}\dot{e_{r}}+ \dot{r}\dot{\theta}\underline{e_{\theta}} + r\ddot{\theta}\underline{e_{\theta}} + r\dot{\theta}\underline{\dot{e_{\theta}}}                   \\ \\
+                                     & = \ddot{r}\underline{e_{r}} + \dot{r}\dot{\theta}\underline{e_{\theta}} + \dot{r}\dot{\theta}\underline{e_{\theta}} + r\ddot{\theta}\underline{e_{\theta}} - r\dot{\theta}^{2}\underline{e_{r}} \\ \\
+                                     & = (\ddot{r} - r\dot{\theta}^{2})\underline{e_{r}} + (r\ddot{\theta} + 2\dot{r}\dot{\theta})\underline{e_{\theta}}\end{aligned}$$
+
+\begin{definition}[Acceleration in Polar co-ordinates]
+	\begin{equation}
+		\label{eq: velocity-acceleration}
+		\ddot{r} = (\ddot{r} - r\dot{\theta}^{2})\underline{e_{r}} + (r\ddot{\theta} + 2\dot{r}\dot{\theta})\underline{e_{\theta}}
+	\end{equation}
+\end{definition}
+
+\subsection{Cross Product Between Position and Velocity in Polar}
+We want to compute the cross product \ref{eq:cross-product-formula-2}
+$$\underline{r} \times \underline{\dot{r}}$$
+We can compute it as follows
+$$\begin{aligned} \underline{r} \times \underline{\dot{r}} & = \underline{r} \times (\dot{r} \underline{e_{r}}+ r\dot{\theta}\underline{e_{\theta}})                                     \\ \\
+                                                         & = (\underline{r} \times \dot{r}\underline{{e_{r}}}) + (\underline{r} \times r\dot{\theta}\underline{e_{\theta}})            \\ \\
+                                                         & =  (r\underline{e_{r}} \times \dot{r}\underline{{e_{r}}}) + (r\underline{e_{}r} \times r\dot{\theta}\underline{e_{\theta}}) \\ \\
+                                                         & =  r\dot{r}(\underline{e_{r}}\times \underline{e_{r}}) + r^{2}\dot{\theta}(\underline{e_{r}}+ \underline{e_{\theta}})       \\ \\
+                                                         & = r^{2}\dot{\theta}\underline{k}\end{aligned}$$
+
+\begin{note}
+	We have used the {\bf properties of cross product} on {cartesian and polar basis vectors}
+
+\end{note}
+
+\begin{definition}[Cross Product b/w Position and Velocity in Polar]
+	\begin{equation}
+		\label{eq: plolar-cross-vel-pos}
+		\underline{r} \times \underline{\dot{r}} =  r^{2}\dot{\theta}\underline{k}
+	\end{equation}
+\end{definition}
+
+\begin{note}
+	$\dot{r} \neq \mid \underline{\dot{r}} \mid$ or rather
+	$$\dot{r} = \underline{\dot{r}} \cdot \underline{e_{r}} = \frac{\underline{r}\cdot\underline{\dot{r}}}{r} \ \ \ \ \ \text{while, } \mid\underline{r} \mid = \sqrt{\dot{r}^2+r^2\dot{\theta}^2}$$
+
+\end{note}
