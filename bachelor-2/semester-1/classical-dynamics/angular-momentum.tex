@@ -1,0 +1,53 @@
+\section{Angular Momentum}
+
+\begin{definition}[Angular Momentum]
+	The {\bf angular momentum} $\underline{J}$ of a particle is given by:
+	\begin{equation}
+		\label{eq: angular-momentum}
+		\underline{J} = \underline{r} \times \underline{p} = m\underline{{r}} \times \underline{\dot{r}}
+	\end{equation}
+	where $\underline{r}$ is the position vector of the particle, and $\underline{p}$ is the momentum (\ref{eq: momentum}) of the particle.
+\end{definition}
+
+\clearpage
+\subsection{Moment of a Force}
+From the following calculation:
+
+$$\begin{aligned} \underline{\dot{J}} & = \frac{d}{dt}\Big(m\underline{{r}} \times \underline{\dot{r}}\Big)                                                                      \\ \\ &= m\underline{\dot{r}} \times \underline{\dot{r}} + m\underline{{r}} \times \underline{\ddot{r}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \text{product rule} \\ \\
+                                    & = 0 + m\underline{r}  \times \underline{\ddot{r}} \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \text{properties of cross product}                     \\ \\
+                                    & = m\underline{r} \times \underline{\ddot{r}}                                                                                             \\\\
+                                    & = \underline{r} \times \underline{F} \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \text{Newton's Equation of Motion (\ref{eq: equation-of-motion})} \\ \\
+                                    & \equiv  \underline{M}
+	\end{aligned}$$
+
+\begin{definition}[Moment of a Force]
+
+	The {\bf moment of a force} $\underline{M}$  of a particle is defined to the {\bf rate of change of angular momentum} (\ref{eq: angular-momentum}) is given by:
+	\begin{equation}
+		\label{eq: moment-of-a-force}
+		\underline{M} = \underline{r} \times \underline{F}
+	\end{equation}
+	where $\underline{r}$ is the position vector of the particle, and $\underline{F}$ is the {\bf force} on the particle.
+\end{definition}
+
+\begin{note}
+	$\underline{M}$ is also called the {\bf torque} of the force $\underline{F}$.
+\end{note}
+
+\subsection{Conservation of Angular Momentum}
+Consider a particle moving under the influence of a force $\underline{F}$ directed towards or away from the origin.
+$$\underline{F} = f(\underline{r})\underline{r} $$
+where $f(\underline{r})$ is a scalar. Hence calculating the moment of the force $\underline{F}$:
+$$\begin{aligned} \underline{\dot{J}} = \underline{r} \times \underline{F} & = f(\underline{r})\underline{r} \times \underline{r} \\ \\
+                                                                         & = 0                                                  \\ \\
+                \Rightarrow \underline{\dot{J}} = 0\end{aligned}$$
+Hence angular momentum is a {\bf conserved quantity}.
+
+\clearpage
+\begin{definition}[Conservation of Angular Momentum]
+	If a force $\underline{F}$ is {\bf proportional} to $\underline{r}$, i.e.
+	$$\underline{F}=f(\underline{r})$$
+	then angular momentum is conserved:
+	$$\underline{\dot{J}} = 0$$
+
+\end{definition}
