@@ -1,0 +1,80 @@
+\subsection{N-body Gravitational System}
+For $N$-body Gravitational System with no external forces, moving under mutual {\bf gravitational forces}, we calculate the {\bf rate of change of Kinetic Energy} \eqref{eq: kinetic-energy} of the system.
+
+\begin{align*}
+	\dot{K}_{tot} & =\frac{d}{dt}\sum_{i=1}^{N}\frac{1}{2}m_i \mid \underline{\dot{r}}_i \mid^{2} \\ \\
+	              & = \sum_{i=1}^{N}m_{i}\underline{\dot{r}}_i \cdot \underline{\ddot{r}}_i
+\end{align*}
+
+\begin{note}
+	For a gravitational system
+	$$m_i \underline{\ddot{r}}_i = \frac{Gm_{i}m_{j}}{\mid \underline{r_i} - \underline{r_j} \mid^{2}} \frac{\underline{r_i} - \underline{r_j}}{\mid \underline{r_i} - \underline{r_j} \mid }$$
+\end{note}
+
+We can write the {\bf rate of change of Kinetic Energy} \eqref{eq: kinetic-energy} of the system as
+
+\begin{align*}
+	\dot{K}_{tot} & = \sum_{i=1}^{N} \underline{\dot{r}}_i  \cdot \sum_{j=1}^{N} \frac{Gm_{i}m_{j}}{\mid \underline{r_i} - \underline{r_j} \mid^{2}} \frac{\underline{r_i} - \underline{r_j}}{\mid \underline{r_i} - \underline{r_j} \mid }       \\ \\
+	              & = \sum_{\stackrel{i=1}{i \neq j}} \frac{Gm_{i}m_{j}}{\mid \underline{r_i} - \underline{r_j} \mid^{3}} \ \ \underline{r_i} \cdot (\underline{r_i} - \underline{r_j})                                                           \\ \\
+	              & = \frac{1}{2}\sum_{\stackrel{i=1}{i \neq j}}\frac{Gm_{i}m_{j}}{\mid \underline{r_i} - \underline{r_j} \mid^{3}} (\underline{r_i} - \underline{r_j}) \cdot (\underline{r_i} - \underline{r_j}) \tag{$*$} \label{ct: n-gravity}
+\end{align*}
+
+\begin{remark}
+	$$\frac{d}{dt}\mid \underline{p}\mid^{2} = 2 \mid \underline{p} \mid \frac{d \mid\underline{p} \mid }{dt}$$
+	and
+	$$\frac{d}{dt}\mid \underline{p}\mid^{2} = \frac{d}{dt}(\underline{p} \cdot \underline{p}) = 2\underline{{p}}\cdot\underline{\dot{p}}  $$
+	And therefore we get
+	\begin{align*}
+		2\mid \underline{p} \mid \frac{d\mid \underline{p}\mid }{dt} = 2\underline{p}\cdot\underline{\dot{p}} \\ \\
+		\Rightarrow \frac{d\mid \underline{p}\mid }{dt} =  \underline{p}\cdot\underline{\dot{p}}
+	\end{align*}
+\end{remark}
+
+\begin{note}
+	\begin{align*}
+		\frac{d}{dt}\frac{1}{\mid \underline{r_i} - \underline{r_j} \mid} & = - \frac{1}{\mid \underline{r_i} - \underline{r_j}\mid^{2}}\frac{d}{dt}\mid \underline{r_i} - \underline{r_j} \mid                       \\ \\
+		                                                                  & = - \frac{1}{\mid \underline{r_i} - \underline{r_j} \mid^3 }(\underline{r_i} - \underline{r_j}) \cdot (\underline{r_i} - \underline{r_j})
+	\end{align*}
+\end{note}
+
+Therefore equation \eqref{ct: n-gravity} becomes
+\begin{align*}
+  \dot{K}_{tot} & = \frac{1}{2}\sum_{\stackrel{i=1}{i \neq j}}^{N} \frac{d}{dt}\frac{Gm_i m_j}{\mid \underline{r_i} - \underline{r_j} \mid}      \\ \\
+	        & = \sum_{i < j}^{N} \frac{d}{dt}\frac{Gm_i m_j}{\mid \underline{r_i} - \underline{r_j} \mid} \tag{$**$} \label{ct: n-gravity-2}
+\end{align*}
+Since $i<j$ is already {\bf half the number} of terms in the sum. \clearpage And using the {\bf summation properties for derivatives} \eqref{ct: n-gravity-2} becomes
+
+\begin{align*}
+  \dot{K}_{tot} & = \sum_{i < j}^{N} \frac{d}{dt}\frac{Gm_i m_j}{\mid \underline{r_i} - \underline{r_j} \mid} \\ \\
+  &= \frac{d}{dt}\sum_{i < j}^{N} \frac{Gm_i m_j}{\mid \underline{r_i} - \underline{r_j} \mid} \\ \\
+\end{align*}
+
+Therefore we get
+\begin{align*}
+  \dot{K}_{tot} - \frac{d}{dt}\sum_{i < j}^{N} \frac{Gm_i m_j}{\mid \underline{r_i} - \underline{r_j} \mid}  = 0 & \Rightarrow \frac{dK_{tot}}{dt} -  \frac{d}{dt}\sum_{i < j}^{N} \frac{Gm_i m_j}{\mid \underline{r_i} - \underline{r_j} \mid} = 0 \\ \\
+                                                                                                        & \Rightarrow \frac{d}{dt}\left( K_{tot} - \sum_{i < j}^{N} \frac{Gm_i m_j}{\mid \underline{r_i} - \underline{r_j} \mid}  \right) = 0 
+\end{align*}
+That is a {\bf Total Energy is conserved}
+
+\begin{definition}[Total Energy in N-body system]
+  The {total energy $E$ in an N-body gravity} system is
+\begin{equation}
+  E = K_{tot} - \sum_{i < j}^{N} \frac{Gm_i m_j}{\mid \underline{r_i} - \underline{r_j} \mid} 
+  \label{eq: total-energy-n-body-grav}
+\end{equation}
+  or using \eqref{eq:total-kinetic-energy-2}, we get
+  \begin{equation}
+    E = \frac{1}{2}M\mid\underline{\dot{R}} \mid^{2} + \frac{1}{2}\sum_{i=1}^{N}m_i \mid \underline{\dot{s}_i}\mid^{2}  - \sum_{i < j}^{N} \frac{Gm_i m_j}{\mid \underline{r_i} - \underline{r_j} \mid}  
+    \label{eq:total-energy-n-body-grav-2}
+  \end{equation}
+\end{definition}
+
+\begin{definition}[Potential Energy in N-body gravitational system]
+  The term
+  \begin{equation}
+     \sum_{i < j}^{N} \frac{Gm_i m_j}{\mid \underline{r_i} - \underline{r_j} \mid} 
+    \label{eq:gravitational-potential-n-body}
+  \end{equation}
+  is the {\bf total gravitational potential energy} expressed as a {\em sum over all pairs of particles}.
+\end{definition}
+\clearpage

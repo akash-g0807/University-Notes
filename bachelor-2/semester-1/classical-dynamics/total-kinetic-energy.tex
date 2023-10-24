@@ -56,7 +56,7 @@ Set $\underline{s}_{i} = \underline{r}_{i} - \underline{R}$, then
 
 \begin{align*}
 	K_{tot} = \frac{1}{2}\sum\limits_{i=1}^{N}m_{i}\mid \underline{\dot{r_{i}}} \mid^{2} & \Rightarrow K_{tot} = \frac{1}{2} \sum\limits_{i=1}^{N}m_{i}\mid \underline{\dot{R}} +\underline{\dot{s_{i}}} \mid^2                                                                                  \\ \\
-	                                                                                     & \Rightarrow K_{tot} = \frac{1}{2}\sum\limits_{i=1}^{N}\Big[m_{i}\mid \underline{R} \mid^{2} + m_{i}2\underline{\dot{R}} \cdot \underline{s_{i}} +m_{i}\mid s_{i} \mid\Big] \label{eq: si-zero}\tag{1}
+                                                                                       & \Rightarrow K_{tot} = \frac{1}{2}\sum\limits_{i=1}^{N}\Big[m_{i}\mid \underline{\dot{R}} \mid^{2} + m_{i}2\underline{\dot{R}} \cdot \underline{s_{i}} +m_{i}\mid \underline{\dot{s}_{i}} \mid\Big] \label{eq: si-zero}\tag{1}
 \end{align*}
 
 \begin{note}
@@ -68,14 +68,14 @@ Set $\underline{s}_{i} = \underline{r}_{i} - \underline{R}$, then
 	$$\sum\limits_{i=1}^{N}m_{i}\underline{s_{i}} = 0$$
 \end{note}
 and therefore, \eqref{eq: si-zero} becomes
-$$K_{tot} = \frac{1}{2}M\mid\underline{\dot{R}} \mid^{2} + \frac{1}{2}m_{i}\mid s_{i}\mid^{2}$$
+$$K_{tot} = \frac{1}{2}M\mid\underline{\dot{R}} \mid^{2} + \frac{1}{2}m_{i}\mid \underline{\dot{s}_{i}}\mid^{2}$$
 where $M = \sum\limits_{i=1}^{N}$
 
 \begin{definition}[Total Kinetic Energy v2]
 	In a discrete system of N particles with {\bf mass} $m_i$ and position vector $\underline{r_i}\left(t  \right) $, the {\bf total kinetic energy} of a collection of particles is defined as
 	\begin{equation}
 		\label{eq:total-kinetic-energy-2}
-		K_{tot} = \frac{1}{2}M\mid\underline{\dot{R}} \mid^{2} + \frac{1}{2}m_{i}\mid s_{i}\mid^{2}
+    K_{tot} = \frac{1}{2}M\mid\underline{\dot{R}} \mid^{2} + \frac{1}{2}\sum_{i=1}^{N}m_{i}\mid \underline{\dot{s}_{i}}\mid^{2}
 	\end{equation}
 
 \end{definition}
