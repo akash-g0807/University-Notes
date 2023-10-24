@@ -1,0 +1,35 @@
+\subsection{Center of Mass}
+\begin{definition}[Center of Mass]
+	In a discrete system of $N$ particles with {\bf masses} $m_i$ and {\bf position vectors} $\underline{r}_i$, relative to a fixed origin $O$, the {\bf center of mass} is defined as
+	\begin{equation}
+		\label{eq:com}
+		\underline{R} = \frac{\sum\limits_{i=1}^{N}m_{i}\underline{r_{i}}}{\sum\limits_{i=1}^{N}m_{i}}
+	\end{equation}
+\end{definition}
+
+\begin{note}
+	The denominator of \eqref{eq:com} is the {\bf total mass} of the system which will be denoted by
+	\begin{equation}
+		\label{eq:total-mass}
+		M = \sum\limits_{i=1}^{N}m_{i}
+	\end{equation}
+	and hence
+	\begin{equation}
+		\label{eq:com2}
+		\underline{R} = \frac{\sum\limits_{i=1}^{N}m_{i}\underline{r_{i}}}{M}
+	\end{equation}
+\end{note}
+
+\begin{definition}[Total External Force using Center of Mass]
+	\label{def:total-external-force}
+	The {\bf total external force} acting on the system is defined as
+	\begin{equation}
+		\label{eq:total-external-force-com}
+		M\underline{\ddot{R}} = \underline{F^{(e)}_\text{total}}
+	\end{equation}
+\end{definition}
+
+\begin{note}
+	If {\bf total external force is zero}, i.e. $\underline{F^{(e)}_\text{total}} = 0$, then $\underline{\ddot{R}} = 0$ and therefore $\underline{\dot{R}}$ is contant.
+	Hence the center of mass {\bf moves with constant velocity}.
+\end{note}
