@@ -1,0 +1,41 @@
+\section{Energy}
+\subsection{Kinetic Energy}
+Consider Newton's Equation of Motion (\ref{eq: equation-of-motion}):
+$$m\underline{\ddot{r}} = \underline{F}$$
+We multiply both sides by $\underline{\dot{r}}$ to get:
+$$\begin{aligned} m\underline{\ddot{r}} = \underline{F} & \Rightarrow  m\underline{\dot{r}} \cdot \underline{\ddot{r}} =\underline{\dot{r}}\cdot \underline{F}                                                                  \\ \\
+                                                      & \Rightarrow m\frac{d}{dt}\Big(\frac{1}{2}\underline{\dot{r}} \cdot\underline{\dot{r}}\ \Big)=\underline{F} \cdot{\underline{r}} \ \ \ \ \ \ \ \ \ \text{(chain rule)} \\ \\
+                                                      & \Rightarrow \frac{1}{2} m\Big(\underbrace{m\frac{1}{2}\mid\underline{r}^{2} \mid}_{\text{Kinetic Energy } K}\Big)= \underline{F}\cdot \underline{r}\end{aligned}$$
+
+\begin{definition}[Kinetic Energy]
+	The {\bf kinetic energy} $K$ of a particle is given by:
+	\begin{equation}
+		\label{eq: kinetic-energy}
+		K = \frac{1}{2}m\mid\underline{\dot{r}}\mid^{2} = \frac{1}{2}m\mid\underline{v}\mid^{2}
+	\end{equation}
+\end{definition}
+
+\subsection{Work Done}
+Consider the rate of change of kinetic energy (\ref{eq: kinetic-energy}):
+$$\begin{aligned} \frac{dK}{dt} = \frac{d}{dt}\Big(\frac{1}{2}m\mid\underline{\dot{r}}\mid^{2}\Big) & \Rightarrow \frac{dK}{dt} = \frac{1}{2}m\frac{d}{dt}\Big(\mid\underline{\dot{r}}\mid^{2}\Big) \\ \\
+                                                                                                  & \Rightarrow \frac{dK}{dt} = m\underline{\dot{r}}\cdot\underline{\ddot{r}}\end{aligned}$$
+Integrating both sides with respect to time $t_1$ to $t_2$ gives:
+
+$$\begin{aligned}  \int_{t_{1}}^{t_{2}} m\underline{r} \cdot \underline{\ddot{r}} dt & = \int_{t_1}^{t_2}\frac{dK}{dt}dt =K(t_{2}) - K(t_{1})        \\ \\
+                                                                                   & = \int_{t_{1}}^{t_{2}}\underline{F} \cdot \underline{\dot{r}} \\ \\
+                                                                                   & = \int^{P_{2}}_{P_{1}}\underline{F} \cdot d\underline{r}\end{aligned}$$
+
+\begin{note}
+	$P_1$ and $P_2$ are the positions of the particle at times $t_1$ and $t_2$ respectively on a trajectory.
+
+	The last integral is called a {\bf line integral} and is integrated along the trajectry/curve.
+\end{note}
+\clearpage
+\begin{definition}[Work Done]
+	The {\bf work done} $W$ by a force $\underline{F}$ on a particle moving along a trajectory from $P_1$ to $P_2$ is given by:
+	\begin{equation}
+		\label{eq: work-done}
+		W = \int_{P_{1}}^{P_{2}}\underline{F} \cdot d\underline{r} = K(t_{2}) - K(t_{1})
+	\end{equation}
+	i.e. it is the change in kinetic energy.
+\end{definition}
