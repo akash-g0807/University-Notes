@@ -1,0 +1,42 @@
+\section{Collection of particles}
+\subsection{Total Force in a collection of particles}
+In a discrete system of $N$ {\bf particles}, of mass $m_{i}$ and positions $\underline{r_{i}}(t)$,  {\em relative} to a chosen origin $O$.\\
+The {\bf particle} $i$ experiences {\bf two} types of forces:
+
+\begin{enumerate}
+	\item {\bf External forces} $\underline{F_{i}}^{ext}$ maybe due to external fields (e.g. gravitational, electric, magnetic, etc.) where $i \in \{1 \ldots N\}$
+	\item {\bf Inter-Particle forces} $\underline{F_{ij}}$ due to the presence of other particles.
+\end{enumerate}
+
+Therefore from Newton's second law, the equation of motion for particle (\ref{eq: newtons-second-law}) $i$ is:
+
+\begin{definition}[Force on Particle $i$]
+	For particles $i$ where $i \in \{1 \ldots N\}$, the force on particle $i$ is given by:
+	\begin{equation}
+		\label{eq: force-on-particle-i}
+		m_{i} \underline{\ddot{r}}_{i} = \underline{F_{i}}^{ext} + \sum_{j=1}^{N} \underline{F_{ij}}
+	\end{equation}
+
+	where $\underline{F_{ij}}$ is the force on particle $i$ due to particle $j$.
+\end{definition}
+
+\begin{note}
+	Particle $i$ does not feel a force from itself, i.e. $\underline{F_{ii}} = 0$.
+
+\end{note}
+
+Due to {\bf Newton's third law}, the force on particle $j$ due to particle $i$ is {\bf equal and opposite} to the force on particle $i$ due to particle $j$, i.e.
+$$\underline{F_{ij}} = - \underline{F_{ji}}$$.
+
+Hence summing on index $i$ in (\ref{eq: force-on-particle-i}) gives:
+$$\begin{aligned} \sum\limits_{i=1}^{N} m\underline{\ddot{r}_{i}} & = \underbrace{\sum\limits_{i,j = 1}^{N}\underline{F_{ij}}}_{0 \text{ because } F_{ij} = -F_{ji}} + \sum\limits_{i = 1}^{N}\underline{F_{i}}^{\text{ext}} \\ \\
+                                                                & = 0 + \sum\limits_{i=1}^{N}\underline{F_{i}}^{\text{ext}}\end{aligned}$$
+
+\begin{definition}[Total Force]
+	The {\bf total force} on the system is given by:
+	\begin{equation}
+		\label{eq: total-force}
+		\underline{F}^{\text{ext}} = \sum_{i=1}^{N} \underline{F_{i}}^{\text{ext}}
+	\end{equation}
+	i.e. the sum of all external forces on the system.
+\end{definition}
