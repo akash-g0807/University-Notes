@@ -15,7 +15,7 @@
 *.cb
 *.cb2
 .*.lb
-
+_region_.*
 ## Intermediate documents:
 *.dvi
 *.xdv

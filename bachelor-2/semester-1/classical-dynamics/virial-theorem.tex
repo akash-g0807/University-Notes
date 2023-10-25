@@ -1,0 +1,47 @@
+\subsection{A Virial Theorem}
+Define the following:
+$$D = \frac{1}{2}\sum_{i-1}^{N}m_{i} \mid \underline{r_{i}}^{2} \mid$$
+Then we get the following for the derivatives
+$$\dot{D} = \sum_{i=1}^{N}m_{i}\underline{r_{i}} \cdot \underline{\dot{r_{i}}} \ \ \ \ \ \ \text{chain
+rule}$$
+and the second derivative is (from the product rule)
+\begin{align*}
+  \ddot{D} = \sum_{i=1}^{n}m_{i}\underline{\dot{r_{i}}}\cdot \underline{\dot{r_{i}}} + \sum_{i=1}^{n}m_{i}\underline{\dot{r_{i}}}\cdot\underline{\ddot{r_{i}}}\label{eq: virial-second-derivative} \tag{$*$}
+\end{align*}
+
+Then therefore we can rewrite the equation \eqref{eq: virial-second-derivative}
+using definition of \eqref{eq: kinetic-energy}
+$$\ddot{D} = 2K_{tot} +   \sum_{i=1}^{n}m_{i}\underline{\dot{r_{i}}}\cdot\underline{\ddot{r_{i}}} $$
+\subsubsection{Virial Theorem on Gravity}
+{\bf Gravitational Force of Attraction} is defined as
+$$m\underline{\ddot{r}_{i}} = \frac{Gm_{i}m_{j}}{\mid\underline{r_{i}} -\underline{r_{j}}\mid^{2}}
+\frac{\underline{r_{j}} - \underline{r_{i}}}{\mid \underline{r_{i}} - \underline{r_{i}} \mid}$$
+And therefore substituting this into the {\bf second derivative} $\ddot{D}$ we
+get the following:
+
+\begin{align*}
+  \ddot{D} &= 2K_{tot} + \sum_{i=1}^{N}\underline{r_{i}} \cdot \sum_{i \neq j}\frac{Gm_{i}m_{j}}{\mid \underline{r_{i}}- \underline{r_{j}} \mid} \frac{\underline{r_{j}} - \underline{r_{i}}}{\mid \underline{r_{i}} - \underline{r_{j}} \mid} \\ \\
+           &= 2K_{tot} + \frac{1}{2}\sum_{i \neq j}(\underline{r_{i}} - \underline{r_{j}}) \cdot \frac{Gm_{i}m_{j}}{\mid \underline{r_{i}} - \underline{r_{j}} \mid^{3}}(\underline{r_{i}} - \underline{r_{j}}) \\ \\
+           &= 2K_{tot} + \Phi \\ \\
+           &= K_{tot} + K_{tot} + \Phi \\ \\
+  \Rightarrow \ddot{D} = K_{tot} + \underbrace{E}_{\text{conserved}}
+\end{align*}
+\clearpage
+
+Define {\bf average Kinetic Energy}
+\begin{definition}[Average Kinetic Energy]
+  \begin{equation}
+    \label{eq: average-kinetic-energy}
+    <K_{tot}> = \frac{1}{\tau}\int_{0}^{\tau}K_{tot}dt
+  \end{equation}
+\end{definition}
+
+Suppose the quantity $\underline{R}$ does not change, we find that
+$$\underline{E} = -<K_{tot}> \ \ \ \text{or} \ \ \ 2 <K_{tot}> = -<V_{tot}>$$
+This fact was the basis of an analysis of the Coma cluster of galaxies by Zwicky (‘On
+the Masses of Nebulae and of Clusters of Nebulae’, F Zwicky, Astrophysical Journal, vol.
+86 (1937) 217), which demonstrated that there should be some kind of ‘dark matter’ to
+account for observation. So far, ‘dark matter’ has not been identified directly though there
+are other, independent, indications that it should exist and many theories as to what it
+might be. (For example, see ‘Particle dark matter: evidence, candidates and constraints’,
+G Bertone, D Hooper, J Silk, Physics Reports 405 (2005) 279).
