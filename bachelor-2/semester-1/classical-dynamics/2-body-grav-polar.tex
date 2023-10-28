@@ -1,0 +1,115 @@
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "master"
+%%% End:
+\subsection{Solving in Polar Co-ordinates}
+
+Let
+$$M = (m_{1} + m_{2}) \ \ \ \ \ \ \ \ \ \text{and} \ \ \ \ \ \ \ \mu = \frac{m_{1}m_{2}}{m_{1} + m_{2}}$$
+Then the required equations become
+
+$$
+	\begin{aligned}
+		\underline{\ddot{r}} & = -\frac{GM\underline{r}}{|\underline{r}|^{3}}                             \\ \\
+		\epsilon             & = \frac{1}{2}\mu|\underline{r}|^{2}  - \frac{Gm_{1}m_{2}}{|\underline{r}|} \\ \\
+		\underline{L}        & = \mu\underline{r} \times \underline{\dot{r}}
+	\end{aligned}
+$$
+\begin{note}
+	$$\underline{L} \cdot \underline{r} = 0  \ \ \text{and} \ \ \underline{L} \cdot \underline{\dot{r}} = 0$$
+	So the motion is orthogonal to $\underline{L}$
+\end{note}
+
+Solving in {\bf polar co-ordinates} to describe $\underline{r}$,
+$$\underline{r} = |\underline{r}|\underline{e_{r}} \equiv r\underline{e_{r}}$$
+Then as seen before the derivatives of $\underline{r}$ are:
+$$\underline{\dot{r}} = \dot{r}\underline{e_{r}} + r\dot{\theta}\underline{e_{\theta}}$$
+$$\underline{\ddot{r}} = (\ddot{r} - r\dot{\theta}^{2})\underline{e_{r}} + (2r\dot{\theta} + r\ddot{\theta})\underline{e_{\theta}}$$
+\clearpage
+Therefore the {\bf angular momentum} can be seen as
+$$
+	\begin{aligned}
+		\underline{L} & = \mu\underline{r} \times \underline{\dot{r}}                                                    \\ \\
+		              & = \mu r\underline{e_{r}} \times (\dot{r}\underline{e_{r}} + r\dot{\theta}\underline{e_{\theta}}) \\ \\
+		              & = \mu r^{2}\dot{\theta} \underline{e_{r}} \times \underline{e_{\theta}}
+	\end{aligned}
+$$
+
+And therefore calculating the magnitude of {\bf Angular Momentum} \eqref{eq:
+	angular-momentum},
+$$
+	\begin{aligned}
+		|\underline{L}| & = \mu r^{2}\dot{\theta}|\underline{e_{r}} \times \underline{e_{\theta}}|                                                   \\ \\
+		                & = \mu r^{2}\dot{\theta}|\underline{e_{r}}| |\underline{e_{\theta}}| \sin \frac{\pi}{2} \ \ \ \ \ \ \ \ \ \text{orthonormal
+		basis vectors}                                                                                                                               \\ \\
+		                & = \mu r^{2}\dot{\theta}                                                                                                    \\ \\
+		\Rightarrow |\underline{L}| = \text{ CONSTANT } = \mu r^{2}\dot{\theta}
+	\end{aligned}
+$$
+
+It is {\bf convention} to represent $r^{2} \dot{\theta} = h$
+and hence we get:
+$$\mu r^{2} \dot{\theta} = \mu h \Rightarrow r^{2}\theta = h$$
+
+Furthermore, calculating the magnitude of {\bf velocity} \eqref{eq:
+	velocity-particle},
+$$
+	\begin{aligned}
+		|\underline{\dot{r}}|^{2} = \dot{r}^{2} + r^{2}\dot{\theta}^{2} = \dot{r}^{2} + \frac{h^{2}}{r^{2}}
+	\end{aligned}
+$$
+and substituting this in the equation for $\varepsilon$, we get
+$$
+	\begin{aligned}
+		\varepsilon = \frac{1}{2}\mu \underline{\dot{r}}^{2} + \underbrace{\frac{1}{2}\frac{\mu h^{2}}{r^{2}} - \frac{Gm_{1}m_{2}}{r}}_{\text{effective potential}}
+	\end{aligned}
+$$
+\subsubsection{Solving the Equation of Motion Polar}
+The equation of motion for this is
+$$
+	\begin{aligned}
+		\underline{\ddot{r}} = -\frac{GM}{r^{2}}\underline{e_{r}} & \Rightarrow (\ddot{r} - r\dot{\theta}^{2})\underline{e_{r}} = -\frac{GM}{r^{2}}\underline{e_{r}} \\ \\
+		                                                          & \Rightarrow (\ddot{r} - r\dot{\theta}^{2}) = -\frac{GM}{r^{2}}                                   \\ \\
+		                                                          & \Rightarrow \ddot{r} - \frac{h^{2}}{r^{3}} = -\frac{GM}{r^{2}}
+	\end{aligned}
+$$
+\clearpage
+\begin{note}[Nice Trick for solving the differential equation]
+	Put
+	$$r = \frac{1}{u} \ \ \ \ \ u = u(\theta) \text{ and } \theta = \theta(t)$$
+	and therefore finding the first and second derivatives:
+	\begin{enumerate}
+		\item $$\begin{aligned}
+				      {\dot{r}} & = \frac{dr}{dt}                                               \\ \\
+				                & = \frac{d}{dt}\left(\frac{1}{u} \right)                       \\ \\
+				                & = \frac{d\theta}{dt}\frac{d}{d\theta}\left(\frac{1}{u}\right) \\ \\
+				                & = \dot{\theta}\left(-\frac{1}{u^{2}}\right)\frac{du}{d\theta} \\ \\
+				                & = hu^{2}\left(-\frac{1}{u^{2}}\right)\frac{du}{d\theta}       \\ \\
+				                & = -h\frac{du}{d\theta}
+			      \end{aligned}$$
+		\item $$\begin{aligned}
+				      {\ddot{r}} & = \frac{d^{2}r}{dt^{2}}                                             \\ \\
+				                 & = \dot{\theta}\frac{d}{d\theta}\left( -h \frac{du}{d\theta} \right) \\ \\
+				                 & = hu^{2}\left(-h \frac{d^{2}u}{d\theta^{2}}\right)                  \\ \\
+				                 & = -h^{2}u^{2}\frac{d^{2}u}{d\theta^{2}}
+			      \end{aligned}$$
+	\end{enumerate}
+\end{note}
+
+Therefore the equation of motion becomes
+$$-hu^{2}\frac{d^{2}u}{d\theta^{2}} - h^{2}u^{3} = -GMu^{2} \Rightarrow \frac{d^{2}u}{d\theta^{2}} + u = \frac{GM}{h^{2}}$$.
+Therefore we {\bf need to solve} this {\bf homogeneous second order differential
+		equation}
+\begin{equation}
+	\label{eq:diff-eqn-gravity}
+	\frac{d^{2}u}{d\theta^{2}} + u = \frac{GM}{h^{2}}
+\end{equation}
+\clearpage
+
+Solving \eqref{eq:diff-eqn-gravity} using Ansatz $u= e^{\lambda \theta}$
+$$
+\begin{aligned}
+  u = A\cos(\theta - \theta_{0}) + \frac{GM}{h^{2}}
+\end{aligned}
+$$
